@@ -1,5 +1,5 @@
 #################################################################################################
-#			Jan Œwierczyñski  26.05.2020						#
+#			Jan Å’wierczyÃ±ski  26.05.2020						#
 #################################################################################################
 	.data 	
 prompt:
@@ -160,9 +160,8 @@ d_change: 			# changing d parameter (from algorithm)
 	addu $s1, $s1, $t5	# d = d+4*(x-y)
 	addiu $s1, $s1, 5	# d = d+4(x-y)+10
 
-	j Bresenham_circle	# Unfortunately here was mistake, I was using jr $ra and jumping back
-				# to the wrong place, where d was overwritten and it was messing
-				# the whole algorithm
+	j Bresenham_circle	
+	
 middle_point:	
 	move $s7, $a1		
 	addu $t6, $t7, $zero 	
